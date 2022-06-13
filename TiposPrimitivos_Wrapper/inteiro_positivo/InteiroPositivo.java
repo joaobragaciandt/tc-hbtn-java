@@ -1,5 +1,5 @@
 public class InteiroPositivo {
-    private Integer valor;
+    private int valor;
 
     public InteiroPositivo(Integer valor) throws Exception {
         ehPositivo(valor);
@@ -13,7 +13,7 @@ public class InteiroPositivo {
 
     public Exception ehPositivo(Integer valor) throws Exception {
         if(valor<0) {
-            throw new Exception("Valor nao eh um valor inteiro positivo");
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
         return null;
     }
