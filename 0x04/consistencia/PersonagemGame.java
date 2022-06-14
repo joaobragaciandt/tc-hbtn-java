@@ -27,9 +27,14 @@ public class PersonagemGame {
     }
 
     public void setNome(String nome) {
-        if(!nome.equals("") && nome != null) {
-            this.nome = nome;
+        try {
+            if(!nome.equals("") && nome != null) {
+                this.nome = nome;
+            }
+        } catch (NullPointerException ex) {
+            //do nothing, name continues the same
         }
+
     }
 
     public String getStatus() {
