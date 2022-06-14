@@ -14,7 +14,7 @@ public class Empregado {
         System.out.printf("Nome: %s\n",getNome());
         System.out.printf("Bairro: %s\n",getEndereco().getBairro());
         System.out.printf("Cidade: %s\n",getEndereco().getCidade());
-        System.out.printf("Pais: %s\n",getEndereco().getPais());
+        System.out.printf("Pais: %s",getEndereco().getPais());
     }
 
     public String getNome() {
