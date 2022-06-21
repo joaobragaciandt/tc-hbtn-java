@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Retangulo extends FormaGeometrica{
     protected double largura;
     protected double altura;
@@ -25,4 +27,15 @@ public class Retangulo extends FormaGeometrica{
 
         this.altura = altura;
     }
+
+    @Override
+    public double area() {
+        return (getAltura() * getLargura());
+    }
+
+    public String toString() {
+        String str = String.format(Locale.US,"[Retangulo] %.2f / %.2f",getLargura(),getAltura());
+        return str;
+    }
+
 }
