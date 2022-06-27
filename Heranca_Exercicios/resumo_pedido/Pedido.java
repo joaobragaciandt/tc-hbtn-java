@@ -40,7 +40,7 @@ public class Pedido {
                         produto.getTitulo(),produto.obterPrecoLiquido(),i.getQuantidade(),totalPorProduto(i));
         }
         System.out.println("----------------------------");
-        System.out.printf("DESCONTO: %d\n",this.getPercentualDescontos());
+        System.out.printf("DESCONTO: %.2f\n",(this.getPercentualDescontos() * this.valorSemDesconto())/100);
         System.out.printf("TOTAL PRODUTOS: %.2f\n",this.valorSemDesconto());
         System.out.println("----------------------------");
         System.out.printf("TOTAL PEDIDO: %.2f\n",this.calcularTotal());
