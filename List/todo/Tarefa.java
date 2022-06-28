@@ -10,10 +10,10 @@ public class Tarefa {
     }
 
     public void modificarDescricao(String novaDescricao) throws IllegalArgumentException {
-        if(novaDescricao != null && novaDescricao != "") {
-            this.descricao = novaDescricao;
+        if(novaDescricao == null || novaDescricao.equals("")) {
+            throw new IllegalArgumentException("Descricao de tarefa invalida");
         } else {
-            throw new IllegalArgumentException();
+            this.descricao = novaDescricao;
         }
     }
 
