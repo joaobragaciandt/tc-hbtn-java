@@ -4,9 +4,8 @@ public class ManipularArrayNumeros {
 
     public static Integer buscarPosicaoNumero(List<Integer> listaInteiros, int numero) {
         Iterator<Integer> itr = listaInteiros.iterator();
-
+        int pos = 0;
         while (itr.hasNext()) {
-            int pos = 0;
             int i = itr.next();
             if (i == numero) {
                 return pos;
