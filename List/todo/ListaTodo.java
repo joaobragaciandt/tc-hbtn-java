@@ -15,7 +15,7 @@ public class ListaTodo {
         while(itr.hasNext()) {
             Tarefa t = itr.next();
             if(t.getIdentificador()==tarefa.getIdentificador()) {
-                String msg  = new String("tarefa com identificador "+ tarefa.getIdentificador() + " ja existente na lista");
+                String msg  = new String("Tarefa com identificador "+ tarefa.getIdentificador() + " ja existente na lista");
                 throw new IllegalArgumentException(msg);
             }
         }
