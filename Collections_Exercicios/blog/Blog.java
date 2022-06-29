@@ -3,7 +3,7 @@ import java.util.stream.Collectors;
 
 public class Blog {
 
-    private ArrayList<Post> listaPosts;
+    private List<Post> listaPosts;
 
     public Blog() {
         this.listaPosts = new ArrayList<>();
