@@ -19,14 +19,21 @@ public class Telefone {
 
     @Override
     public boolean equals(Object o) {
+
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Telefone)) return false;
+
         Telefone telefone = (Telefone) o;
-        return codigoArea.equals(telefone.codigoArea) && numero.equals(telefone.numero);
+
+        if (!codigoArea.equals(telefone.codigoArea)) return false;
+        return numero.equals(telefone.numero);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(codigoArea, numero);
+
+        int result = codigoArea.hashCode();
+        result = 5 * result + numero.hashCode();
+        return result;
     }
 }
