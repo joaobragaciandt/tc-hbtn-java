@@ -45,8 +45,7 @@ public class Blog {
 
     public Set<Post> obterPostsPorCategoria(Categorias categoria) {
 
-        Set<Post> listaPostsCategoria = new TreeSet<>(
-                Comparator.comparing(Post::getTitulo));
+        Set<Post> listaPostsCategoria = new TreeSet<>();
 
         for(Post p : listaPosts) {
             if(p.getCategoria().equals(categoria)) {
@@ -59,8 +58,7 @@ public class Blog {
 
     public Set<Post> obterPostsPorAutor(Autor autor) {
 
-        Set<Post> listapostsAutor = new TreeSet<>(
-                Comparator.comparing(Post::getTitulo));
+        Set<Post> listapostsAutor = new TreeSet<>();
 
         for(Post p : listaPosts) {
             if(p.getAutor().equals(autor)) {
@@ -73,14 +71,14 @@ public class Blog {
 
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
 
-        Map<Categorias,Set<Post>> mapCategorias = new HashMap();
+        Map<Categorias,Set<Post>> mapCategorias = new TreeMap();
 
         for(Post p : listaPosts) {
             Set<Post> set;
             if(mapCategorias.containsKey(p.getCategoria())) {
-                set = new HashSet(mapCategorias.values());
+                set = mapCategorias.get(p.getCategoria());
             }else {
-                set = new HashSet();
+                set = new TreeSet();
             }
             set.add(p);
             mapCategorias.put(p.getCategoria(),set);
@@ -90,14 +88,14 @@ public class Blog {
     }
 
     public Map<Autor, Set<Post>> obterTodosPostsPorAutor() {
-        Map<Autor,Set<Post>> mapAutores = new HashMap();
+        Map<Autor,Set<Post>> mapAutores = new TreeMap();
 
         for(Post p : listaPosts) {
             Set<Post> set;
             if(mapAutores.containsKey(p.getAutor())) {
-                set = new HashSet(mapAutores.values());
+                set = mapAutores.get(p.getAutor());
             }else {
-                set = new HashSet();
+                set = new TreeSet();
             }
             set.add(p);
             mapAutores.put(p.getAutor(),set);

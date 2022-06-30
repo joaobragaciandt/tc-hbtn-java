@@ -1,4 +1,4 @@
-public class Post{
+public class Post implements Comparable{
 
     private Autor autor;
     private String titulo;
@@ -29,24 +29,8 @@ public class Post{
         return titulo;
     }
 
-
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Post)) return false;
-
-        Post post = (Post) o;
-
-        if (getAutor() != null ? !getAutor().equals(post.getAutor()) : post.getAutor() != null) return false;
-        if (getTitulo() != null ? !getTitulo().equals(post.getTitulo()) : post.getTitulo() != null) return false;
-        if (corpo != null ? !corpo.equals(post.corpo) : post.corpo != null) return false;
-        return getCategoria() == post.getCategoria();
-    }
-
-    @Override
-    public int hashCode() {
-        int result = getAutor() != null ? getAutor().hashCode() : 0;
-        result = 31 * result + (getTitulo() != null ? getTitulo().hashCode() : 0);
-        return result;
+    public int compareTo(Object o) {
+        return this.getTitulo().compareTo(((Post)o).getTitulo());
     }
 }

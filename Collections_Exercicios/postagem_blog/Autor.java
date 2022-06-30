@@ -1,4 +1,4 @@
-public class Autor {
+public class Autor implements Comparable {
 
     private String nome;
     private String sobrenome;
@@ -22,20 +22,25 @@ public class Autor {
     }
 
     @Override
+    public int compareTo(Object o) {
+        return this.toString().compareTo((o).toString());
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Autor)) return false;
 
         Autor autor = (Autor) o;
 
-        if (nome != null ? !nome.equals(autor.nome) : autor.nome != null) return false;
-        return sobrenome != null ? sobrenome.equals(autor.sobrenome) : autor.sobrenome == null;
+        if (getNome() != null ? !getNome().equals(autor.getNome()) : autor.getNome() != null) return false;
+        return getSobrenome() != null ? getSobrenome().equals(autor.getSobrenome()) : autor.getSobrenome() == null;
     }
 
     @Override
     public int hashCode() {
-        int result = nome != null ? nome.hashCode() : 0;
-        result = 31 * result + (sobrenome != null ? sobrenome.hashCode() : 0);
+        int result = getNome() != null ? getNome().hashCode() : 0;
+        result = 31 * result + (getSobrenome() != null ? getSobrenome().hashCode() : 0);
         return result;
     }
 }
