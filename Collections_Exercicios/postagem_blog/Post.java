@@ -31,6 +31,6 @@ public class Post implements Comparable{
 
     @Override
     public int compareTo(Object o) {
-        return this.getTitulo().compareTo(((Post)o).getTitulo());
+        return this.toString().compareTo(((Post)o).toString());
     }
 }

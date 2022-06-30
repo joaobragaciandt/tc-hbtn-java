@@ -1,6 +1,7 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("unchecked")
 public class Blog {
 
     private List<Post> listaPosts;
