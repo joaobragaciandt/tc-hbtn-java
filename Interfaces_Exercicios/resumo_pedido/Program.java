@@ -4,7 +4,7 @@ import java.util.Locale;
 public class Program {
     public static void main(String[] args) {
 
-        Locale.getDefault(new Locale("pt", "BR"));
+        Locale.setDefault(new Locale("pt", "BR"));
 
         Pedido pedido1 = new Pedido(1, 1500, 234.90);
         Pedido pedido2 = new Pedido(2, 600, 124.00);
