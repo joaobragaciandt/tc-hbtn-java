@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Biblioteca <T extends  Midia> {
+public class Biblioteca <T extends Midia> {
 
     private ArrayList<T> listaMidias;
 
