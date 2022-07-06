@@ -20,6 +20,6 @@ public class Eletronico {
     @Override
     public String toString() {
         DecimalFormat dec = new DecimalFormat("#0.000000");
-        return "[" + getDescricao() + "] " + dec.format(getValor());
+        return "[" + getDescricao() + "] R$ " + dec.format(getValor());
     }
 }
