@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 public class Eletronico {
 
     private String descricao;
@@ -18,6 +19,7 @@ public class Eletronico {
 
     @Override
     public String toString() {
-        return "[" + getDescricao() + "] " + getValor();
+        DecimalFormat dec = new DecimalFormat("#0.0000");
+        return "[" + getDescricao() + "] " + dec.format(getValor());
     }
 }

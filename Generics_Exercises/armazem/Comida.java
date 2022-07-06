@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 public class Comida {
 
     private String nome;
@@ -24,6 +25,7 @@ public class Comida {
 
     @Override
     public String toString() {
-        return "[" + getNome() + "] " + getCalorias() + " R$ " + getPreco();
+        DecimalFormat dec = new DecimalFormat("#0.0000");
+        return "[" + getNome() + "] " + getCalorias() + " R$ " + dec.format(getPreco());
     }
 }

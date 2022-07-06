@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
-        Locale.setDefault(new Locale("pt", "BR"));
+        //Locale.setDefault(new Locale("pt", "br"));
 
         Comida comida1 = new Comida("arroz", 100, 15.9);
         Comida comida2 = new Comida("feijao", 80, 23.0);
