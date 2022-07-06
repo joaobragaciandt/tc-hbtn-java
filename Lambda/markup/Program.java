@@ -2,7 +2,7 @@ import java.util.Locale;
 
 public class Program {
     public static void main(String[] args) {
-        Locale.setDefault(new Locale("pt","br"));
+        //Locale.setDefault(new Locale("pt","br"));
 
         Produto produto1 = new Produto(129.99, "Mouse Gamer");
 
