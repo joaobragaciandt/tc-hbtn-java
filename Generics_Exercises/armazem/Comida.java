@@ -25,7 +25,7 @@ public class Comida {
 
     @Override
     public String toString() {
-        DecimalFormat dec = new DecimalFormat("#0.0000");
+        DecimalFormat dec = new DecimalFormat("#0.000000");
         return "[" + getNome() + "] " + getCalorias() + " R$ " + dec.format(getPreco());
     }
 }

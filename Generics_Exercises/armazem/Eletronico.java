@@ -19,7 +19,7 @@ public class Eletronico {
 
     @Override
     public String toString() {
-        DecimalFormat dec = new DecimalFormat("#0.0000");
+        DecimalFormat dec = new DecimalFormat("#0.000000");
         return "[" + getDescricao() + "] " + dec.format(getValor());
     }
 }
