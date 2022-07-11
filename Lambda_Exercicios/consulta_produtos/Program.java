@@ -1,5 +1,3 @@
-package src;
-
 import java.util.*;
 import java.util.function.*;
 
@@ -8,19 +6,19 @@ public class Program {
         //Locale.setDefault(new Locale("pt","br"));
 
         Produto produto1 = new Produto("Cafe Chocolate Trufado Baggio",
-                21.99, 250, 120, TiposProduto.COZINHA);
+                21.99, 250, 120, src.TiposProduto.COZINHA);
 
         Produto produto2 = new Produto("Leite Condensado Moca",
-                6.29, 395, 200, TiposProduto.COZINHA);
+                6.29, 395, 200, src.TiposProduto.COZINHA);
 
         Produto produto3 = new Produto("Carro Vortex",
-                799.90, 1560, 5, TiposProduto.BRINQUEDO);
+                799.90, 1560, 5, src.TiposProduto.BRINQUEDO);
 
         Produto produto4 = new Produto("Smart TV LED 32 HD LG",
-                1452.55, 6300, 7, TiposProduto.ELETRONICO);
+                1452.55, 6300, 7, src.TiposProduto.ELETRONICO);
 
         Produto produto5 = new Produto("Nintendo Switch",
-                2990.00, 1700, 12, TiposProduto.ELETRONICO);
+                2990.00, 1700, 12, src.TiposProduto.ELETRONICO);
 
         List<Produto> produtos = Arrays.asList(
                 produto1, produto2, produto3, produto4, produto5);
@@ -32,7 +30,7 @@ public class Program {
                 p -> p.getPeso() <= 1600);
 
         List<Produto> produtosCozinha = ConsultaProdutos.filtrar(produtos,
-                p -> p.getTipo() == TiposProduto.COZINHA);
+                p -> p.getTipo() == src.TiposProduto.COZINHA);
 
         List<Produto> produtosBaixoEstoque = ConsultaProdutos.filtrar(produtos,
                 p -> p.getQuantidadeEmEstoque() <= 10);
