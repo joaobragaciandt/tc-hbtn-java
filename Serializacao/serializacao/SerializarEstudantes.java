@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@SuppressWarnings("unchecked")
 public class SerializarEstudantes<Estudante> {
 
     private final String nomeArquivo;
