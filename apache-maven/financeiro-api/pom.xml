@@ -5,6 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.techcamps.financeiro</groupId>
+    <name>Projeto Financeiro Demo</name>
+    <description>Projeto Financeiro Demo usando Apache Maven Demo</description>
     <artifactId>financeiro-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <build>
